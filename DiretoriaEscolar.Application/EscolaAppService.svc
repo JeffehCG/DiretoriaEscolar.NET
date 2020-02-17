@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DiretoriaEscolar.Application.EscolaAppService" CodeBehind="EscolaAppService.svc.cs" Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory"%>

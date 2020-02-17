@@ -1,0 +1,8 @@
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\bin\Debug\DiretoriaEscolar.ApplicationClass.dll
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\bin\Debug\DiretoriaEscolar.ApplicationClass.pdb
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\bin\Debug\DiretoriaEscolar.Domain.dll
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\bin\Debug\DiretoriaEscolar.Domain.pdb
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\obj\Debug\DiretoriaEscolar.ApplicationClass.csprojAssemblyReference.cache
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\obj\Debug\DiretoriaEscolar.ApplicationClass.csproj.CopyComplete
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\obj\Debug\DiretoriaEscolar.ApplicationClass.dll
+C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.ApplicationClass\obj\Debug\DiretoriaEscolar.ApplicationClass.pdb
