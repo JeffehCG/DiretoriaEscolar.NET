@@ -50,7 +50,6 @@ C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscol
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\obj\Debug\DiretoriaEscolar.WebForms.csprojAssemblyReference.cache
-C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\obj\Debug\DiretoriaEscolar.WebForms.csproj.CoreCompileInputs.cache
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\obj\Debug\DiretoriaEscolar.WebForms.csproj.CopyComplete
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\obj\Debug\DiretoriaEscolar.WebForms.dll
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.WebForms\obj\Debug\DiretoriaEscolar.WebForms.pdb

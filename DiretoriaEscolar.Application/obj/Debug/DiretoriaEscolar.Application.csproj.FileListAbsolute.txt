@@ -25,4 +25,3 @@ C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscol
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Application\obj\Debug\DiretoriaEscolar.Application.csproj.CopyComplete
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Application\obj\Debug\DiretoriaEscolar.Application.dll
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Application\obj\Debug\DiretoriaEscolar.Application.pdb
-C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Application\obj\Debug\DiretoriaEscolar.Application.csproj.CoreCompileInputs.cache

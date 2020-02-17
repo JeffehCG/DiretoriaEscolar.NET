@@ -3,4 +3,3 @@ C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscol
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Domain\obj\Debug\DiretoriaEscolar.Domain.csprojAssemblyReference.cache
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Domain\obj\Debug\DiretoriaEscolar.Domain.dll
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Domain\obj\Debug\DiretoriaEscolar.Domain.pdb
-C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Domain\obj\Debug\DiretoriaEscolar.Domain.csproj.CoreCompileInputs.cache

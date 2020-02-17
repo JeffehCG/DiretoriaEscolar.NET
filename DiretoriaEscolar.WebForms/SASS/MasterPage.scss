@@ -1,0 +1,39 @@
+﻿h1,h2,h3,h4,h5,h6,span,p, html, body{
+    margin: 0%;
+    padding:0%;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+
+    body {
+        height: 100%;
+        width: 100%;
+
+        #form1 {
+            height: 100%;
+            width: 100%;
+
+            header {
+                height: 10%;
+                width: 100%;
+            }
+
+            .menu-page {
+                height: 10%;
+                width: 100%;
+            }
+
+            .content-page {
+                height: 70%;
+                width: 100%;
+            }
+
+            footer {
+                height: 10%;
+                width: 100%;
+            }
+        }
+    }
+}

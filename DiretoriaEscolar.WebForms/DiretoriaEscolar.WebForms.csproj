@@ -110,7 +110,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="CSS\MasterPage.css" />
     <Content Include="EscolaPage.aspx" />
+    <Content Include="gulpfile.js" />
     <Content Include="TurmaPage.aspx" />
     <Content Include="Web.config" />
     <None Include="Connected Services\AlunoService\AlunoAppService2.xsd">
@@ -208,7 +210,9 @@
     <None Include="Connected Services\AlunoService\AlunoAppService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="package.json" />
     <None Include="packages.config" />
+    <Content Include="SASS\MasterPage.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -225,9 +229,7 @@
     <WCFMetadataStorage Include="Connected Services\EscolaService\" />
     <WCFMetadataStorage Include="Connected Services\TurmaService\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CSS\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

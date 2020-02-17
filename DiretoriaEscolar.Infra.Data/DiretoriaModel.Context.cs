@@ -26,9 +26,9 @@ namespace DiretoriaEscolar.Infra.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<DiretoriaEscolar.Domain.Entities.Escola> Escola { get; set; }
-        public virtual DbSet<DiretoriaEscolar.Domain.Entities.Aluno> Aluno { get; set; }
-        public virtual DbSet<DiretoriaEscolar.Domain.Entities.Turma> Turma { get; set; }
-        public virtual DbSet<DiretoriaEscolar.Domain.Entities.Endereco> Endereco { get; set; }
+        public virtual DbSet<Escola> Escola { get; set; }
+        public virtual DbSet<Aluno> Aluno { get; set; }
+        public virtual DbSet<Turma> Turma { get; set; }
+        public virtual DbSet<Endereco> Endereco { get; set; }
     }
 }
