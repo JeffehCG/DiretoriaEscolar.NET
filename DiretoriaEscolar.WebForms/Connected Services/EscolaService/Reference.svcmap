@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7777e18e-da6e-4176-abae-10d4278a3ba2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50160/EscolaAppService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EscolaAppService.xsd" MetadataType="Schema" ID="0e30a0b3-767e-45bb-a753-802ff8641bec" SourceId="1" SourceUrl="http://localhost:50160/EscolaAppService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EscolaAppService.disco" MetadataType="Disco" ID="811d68ed-6941-48f2-a475-3a7b2528503d" SourceId="1" SourceUrl="http://localhost:50160/EscolaAppService.svc?disco" />
+    <MetadataFile FileName="EscolaAppService1.xsd" MetadataType="Schema" ID="637f2a0d-205e-4e7f-a616-011a6e45f001" SourceId="1" SourceUrl="http://localhost:50160/EscolaAppService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EscolaAppService2.xsd" MetadataType="Schema" ID="0383472d-f31c-4498-9a64-53b112f0963c" SourceId="1" SourceUrl="http://localhost:50160/EscolaAppService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EscolaAppService.wsdl" MetadataType="Wsdl" ID="3c3d312d-c3a3-4e79-bb07-d0ff90a4a48d" SourceId="1" SourceUrl="http://localhost:50160/EscolaAppService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DiretoriaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DiretoriaModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Escola" EntityType="DiretoriaModel.Escola" />
+    <EntitySet Name="Aluno" EntityType="DiretoriaModel.Aluno" />
+    <EntitySet Name="Turma" EntityType="DiretoriaModel.Turma" />
+    <EntitySet Name="EnderecoSet" EntityType="DiretoriaModel.Endereco" />
+    <AssociationSet Name="EscolaTurma" Association="DiretoriaModel.EscolaTurma">
+      <End Role="Escola" EntitySet="Escola" />
+      <End Role="Turma" EntitySet="Turma" />
+    </AssociationSet>
+    <AssociationSet Name="TurmaAluno" Association="DiretoriaModel.TurmaAluno">
+      <End Role="Turma" EntitySet="Turma" />
+      <End Role="Aluno" EntitySet="Aluno" />
+    </AssociationSet>
+    <AssociationSet Name="AlunoEnderecoAluno" Association="DiretoriaModel.AlunoEnderecoAluno">
+      <End Role="Aluno" EntitySet="Aluno" />
+      <End Role="EnderecoAluno" EntitySet="EnderecoSet" />
+    </AssociationSet>
+    <AssociationSet Name="EscolaEndereco" Association="DiretoriaModel.EscolaEndereco">
+      <End Role="Escola" EntitySet="Escola" />
+      <End Role="Endereco" EntitySet="EnderecoSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Escola">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="CNPJ" Type="String" Nullable="false" />
+    <NavigationProperty Name="Turma" Relationship="DiretoriaModel.EscolaTurma" FromRole="Escola" ToRole="Turma" />
+    <NavigationProperty Name="Endereco" Relationship="DiretoriaModel.EscolaEndereco" FromRole="Escola" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="Aluno">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="CPF" Type="String" Nullable="false" />
+    <Property Name="Telefone" Type="String" Nullable="false" />
+    <NavigationProperty Name="Turma" Relationship="DiretoriaModel.TurmaAluno" FromRole="Aluno" ToRole="Turma" />
+    <Property Name="TurmaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EnderecoAluno" Relationship="DiretoriaModel.AlunoEnderecoAluno" FromRole="Aluno" ToRole="EnderecoAluno" />
+    <Property Name="DataNascimento" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Turma">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ano" Type="String" Nullable="false" />
+    <Property Name="Serie" Type="String" Nullable="false" />
+    <Property Name="Classe" Type="String" Nullable="false" />
+    <NavigationProperty Name="Escola" Relationship="DiretoriaModel.EscolaTurma" FromRole="Turma" ToRole="Escola" />
+    <Property Name="EscolaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Aluno" Relationship="DiretoriaModel.TurmaAluno" FromRole="Turma" ToRole="Aluno" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" Nullable="false" />
+    <Property Name="Cidade" Type="String" Nullable="false" />
+    <Property Name="Bairro" Type="String" Nullable="false" />
+    <Property Name="Rua" Type="String" Nullable="false" />
+    <Property Name="Numero" Type="String" Nullable="false" />
+    <NavigationProperty Name="Aluno" Relationship="DiretoriaModel.AlunoEnderecoAluno" FromRole="EnderecoAluno" ToRole="Aluno" />
+    <NavigationProperty Name="Escola" Relationship="DiretoriaModel.EscolaEndereco" FromRole="Endereco" ToRole="Escola" />
+  </EntityType>
+  <Association Name="EscolaTurma">
+    <End Type="DiretoriaModel.Escola" Role="Escola" Multiplicity="1" />
+    <End Type="DiretoriaModel.Turma" Role="Turma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Turma">
+        <PropertyRef Name="EscolaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TurmaAluno">
+    <End Type="DiretoriaModel.Turma" Role="Turma" Multiplicity="1" />
+    <End Type="DiretoriaModel.Aluno" Role="Aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turma">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Aluno">
+        <PropertyRef Name="TurmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AlunoEnderecoAluno">
+    <End Type="DiretoriaModel.Aluno" Role="Aluno" Multiplicity="0..1" />
+    <End Type="DiretoriaModel.Endereco" Role="EnderecoAluno" Multiplicity="0..1" />
+  </Association>
+  <Association Name="EscolaEndereco">
+    <End Type="DiretoriaModel.Escola" Role="Escola" Multiplicity="0..1" />
+    <End Type="DiretoriaModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+  </Association>
+</Schema>

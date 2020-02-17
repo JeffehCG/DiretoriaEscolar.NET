@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9459558d-cb3d-403a-991a-8a4c446fa1d5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50160/TurmaAppService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TurmaAppService.wsdl" MetadataType="Wsdl" ID="c7cfe00d-caf4-49f3-b9c3-8df8f49a03e4" SourceId="1" SourceUrl="http://localhost:50160/TurmaAppService.svc?wsdl" />
+    <MetadataFile FileName="TurmaAppService.xsd" MetadataType="Schema" ID="e992c937-8df4-41d5-8823-819a26d874ee" SourceId="1" SourceUrl="http://localhost:50160/TurmaAppService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TurmaAppService.disco" MetadataType="Disco" ID="2035610d-6912-411f-a44e-88ac2787b589" SourceId="1" SourceUrl="http://localhost:50160/TurmaAppService.svc?disco" />
+    <MetadataFile FileName="TurmaAppService1.xsd" MetadataType="Schema" ID="894d76d4-9684-43d5-92b6-888af4b0806f" SourceId="1" SourceUrl="http://localhost:50160/TurmaAppService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TurmaAppService2.xsd" MetadataType="Schema" ID="341a9f18-1802-4cb4-bb35-a3440725eaa3" SourceId="1" SourceUrl="http://localhost:50160/TurmaAppService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

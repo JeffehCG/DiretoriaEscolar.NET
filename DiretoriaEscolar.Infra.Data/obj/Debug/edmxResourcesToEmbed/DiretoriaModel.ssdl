@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DiretoriaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DiretoriaModelStoreContainer">
+    <EntitySet Name="Escola" EntityType="DiretoriaModel.Store.Escola" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Aluno" EntityType="DiretoriaModel.Store.Aluno" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Turma" EntityType="DiretoriaModel.Store.Turma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EnderecoSet" EntityType="DiretoriaModel.Store.EnderecoSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="EscolaTurma" Association="DiretoriaModel.Store.EscolaTurma">
+      <End Role="Escola" EntitySet="Escola" />
+      <End Role="Turma" EntitySet="Turma" />
+    </AssociationSet>
+    <AssociationSet Name="TurmaAluno" Association="DiretoriaModel.Store.TurmaAluno">
+      <End Role="Turma" EntitySet="Turma" />
+      <End Role="Aluno" EntitySet="Aluno" />
+    </AssociationSet>
+    <AssociationSet Name="AlunoEnderecoAluno" Association="DiretoriaModel.Store.AlunoEnderecoAluno">
+      <End Role="Aluno" EntitySet="Aluno" />
+      <End Role="EnderecoAluno" EntitySet="EnderecoSet" />
+    </AssociationSet>
+    <AssociationSet Name="EscolaEndereco" Association="DiretoriaModel.Store.EscolaEndereco">
+      <End Role="Escola" EntitySet="Escola" />
+      <End Role="Endereco" EntitySet="EnderecoSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Escola">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CNPJ" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aluno">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CPF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TurmaId" Type="int" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Turma">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ano" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Serie" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Classe" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EscolaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EnderecoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bairro" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Rua" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Numero" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Aluno_Id" Type="int" Nullable="true" />
+    <Property Name="Escola_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <Association Name="EscolaTurma">
+    <End Role="Escola" Type="DiretoriaModel.Store.Escola" Multiplicity="1" />
+    <End Role="Turma" Type="DiretoriaModel.Store.Turma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Turma">
+        <PropertyRef Name="EscolaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TurmaAluno">
+    <End Role="Turma" Type="DiretoriaModel.Store.Turma" Multiplicity="1" />
+    <End Role="Aluno" Type="DiretoriaModel.Store.Aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turma">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Aluno">
+        <PropertyRef Name="TurmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AlunoEnderecoAluno">
+    <End Role="Aluno" Type="DiretoriaModel.Store.Aluno" Multiplicity="0..1" />
+    <End Role="EnderecoAluno" Type="DiretoriaModel.Store.EnderecoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aluno">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EnderecoAluno">
+        <PropertyRef Name="Aluno_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EscolaEndereco">
+    <End Role="Escola" Type="DiretoriaModel.Store.Escola" Multiplicity="0..1" />
+    <End Role="Endereco" Type="DiretoriaModel.Store.EnderecoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="Escola_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

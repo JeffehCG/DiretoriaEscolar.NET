@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aabd43db-01c0-4efb-8343-8b8b71aed3c3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50160/EnderecoAppService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EnderecoAppService.xsd" MetadataType="Schema" ID="392ed4a3-f37d-4af3-94cb-75b114f67aaa" SourceId="1" SourceUrl="http://localhost:50160/EnderecoAppService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EnderecoAppService.disco" MetadataType="Disco" ID="e36a61ad-7704-48b5-aac8-39d1bd60e9fe" SourceId="1" SourceUrl="http://localhost:50160/EnderecoAppService.svc?disco" />
+    <MetadataFile FileName="EnderecoAppService.wsdl" MetadataType="Wsdl" ID="695d8380-506c-456a-93a5-1de039001aa7" SourceId="1" SourceUrl="http://localhost:50160/EnderecoAppService.svc?wsdl" />
+    <MetadataFile FileName="EnderecoAppService1.xsd" MetadataType="Schema" ID="52ea89ab-0106-4d1a-9edd-c8c1632e95e4" SourceId="1" SourceUrl="http://localhost:50160/EnderecoAppService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EnderecoAppService2.xsd" MetadataType="Schema" ID="aae89e0d-dcfd-4c79-888e-c76087bb63b8" SourceId="1" SourceUrl="http://localhost:50160/EnderecoAppService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

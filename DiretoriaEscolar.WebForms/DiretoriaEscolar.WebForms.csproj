@@ -1,5 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,16 +7,16 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{254E7464-B693-4598-B6E3-984C475C3398}</ProjectGuid>
+    <ProjectGuid>{1C569A5C-365B-4834-B104-7E2CE8F2FA5C}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DiretoriaEscolar.WebForms</RootNamespace>
     <AssemblyName>DiretoriaEscolar.WebForms</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44347</IISExpressSSLPort>
+    <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -65,16 +65,149 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AlunoService\AlunoAppService.disco" />
+    <None Include="Connected Services\AlunoService\configuration91.svcinfo" />
+    <None Include="Connected Services\AlunoService\configuration.svcinfo" />
+    <Content Include="AlunoPage.aspx" />
+    <Content Include="Connected Services\AlunoService\DiretoriaEscolar.WebForms.AlunoService.Aluno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AlunoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\EnderecoService\DiretoriaEscolar.WebForms.EnderecoService.Endereco.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\EnderecoService\EnderecoAppService.disco" />
+    <None Include="Connected Services\EnderecoService\configuration91.svcinfo" />
+    <None Include="Connected Services\EnderecoService\configuration.svcinfo" />
+    <None Include="Connected Services\EnderecoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\EscolaService\DiretoriaEscolar.WebForms.EscolaService.Escola.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\EscolaService\EscolaAppService.disco" />
+    <None Include="Connected Services\EscolaService\configuration91.svcinfo" />
+    <None Include="Connected Services\EscolaService\configuration.svcinfo" />
+    <None Include="Connected Services\EscolaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TurmaService\DiretoriaEscolar.WebForms.TurmaService.Turma.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TurmaService\TurmaAppService.disco" />
+    <None Include="Connected Services\TurmaService\configuration91.svcinfo" />
+    <None Include="Connected Services\TurmaService\configuration.svcinfo" />
+    <None Include="Connected Services\TurmaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="EscolaPage.aspx" />
+    <Content Include="TurmaPage.aspx" />
     <Content Include="Web.config" />
+    <None Include="Connected Services\AlunoService\AlunoAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnderecoService\EnderecoAppService.wsdl" />
+    <None Include="Connected Services\EnderecoService\EnderecoAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnderecoService\EnderecoAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnderecoService\EnderecoAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EscolaService\EscolaAppService.wsdl" />
+    <None Include="Connected Services\EscolaService\EscolaAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EscolaService\EscolaAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EscolaService\EscolaAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TurmaService\TurmaAppService.wsdl" />
+    <None Include="Connected Services\TurmaService\TurmaAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TurmaService\TurmaAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TurmaService\TurmaAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.sitemap" />
+    <Content Include="MasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlunoPage.aspx.cs">
+      <DependentUpon>AlunoPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlunoPage.aspx.designer.cs">
+      <DependentUpon>AlunoPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AlunoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EnderecoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EscolaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TurmaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EscolaPage.aspx.cs">
+      <DependentUpon>EscolaPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EscolaPage.aspx.designer.cs">
+      <DependentUpon>EscolaPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TurmaPage.aspx.cs">
+      <DependentUpon>TurmaPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TurmaPage.aspx.designer.cs">
+      <DependentUpon>TurmaPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AlunoService\AlunoAppService.wsdl" />
+    <None Include="Connected Services\AlunoService\AlunoAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlunoService\AlunoAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -85,6 +218,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AlunoService\" />
+    <WCFMetadataStorage Include="Connected Services\EnderecoService\" />
+    <WCFMetadataStorage Include="Connected Services\EscolaService\" />
+    <WCFMetadataStorage Include="Connected Services\TurmaService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -99,9 +241,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51411</DevelopmentServerPort>
+          <DevelopmentServerPort>61756</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44347/</IISUrl>
+          <IISUrl>http://localhost:61756/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -115,7 +257,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

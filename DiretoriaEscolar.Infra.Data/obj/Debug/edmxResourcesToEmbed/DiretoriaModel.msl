@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DiretoriaModelStoreContainer" CdmEntityContainer="DiretoriaModelContainer">
+    <EntitySetMapping Name="Escola">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Escola)">
+        <MappingFragment StoreEntitySet="Escola">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aluno">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Aluno)">
+        <MappingFragment StoreEntitySet="Aluno">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="TurmaId" ColumnName="TurmaId" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turma">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Turma)">
+        <MappingFragment StoreEntitySet="Turma">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+          <ScalarProperty Name="Classe" ColumnName="Classe" />
+          <ScalarProperty Name="EscolaId" ColumnName="EscolaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Endereco)">
+        <MappingFragment StoreEntitySet="EnderecoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AlunoEnderecoAluno" TypeName="DiretoriaModel.AlunoEnderecoAluno" StoreEntitySet="EnderecoSet">
+      <EndProperty Name="Aluno">
+        <ScalarProperty Name="Id" ColumnName="Aluno_Id" />
+      </EndProperty>
+      <EndProperty Name="EnderecoAluno">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Aluno_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EscolaEndereco" TypeName="DiretoriaModel.EscolaEndereco" StoreEntitySet="EnderecoSet">
+      <EndProperty Name="Escola">
+        <ScalarProperty Name="Id" ColumnName="Escola_Id" />
+      </EndProperty>
+      <EndProperty Name="Endereco">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Escola_Id" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
