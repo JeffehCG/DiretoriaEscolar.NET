@@ -1,4 +1,5 @@
-﻿using DiretoriaEscolar.Domain.Interfaces.Repositories;
+﻿using DiretoriaEscolar.Domain.Entities;
+using DiretoriaEscolar.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,9 +10,9 @@ namespace DiretoriaEscolar.Infra.Data.Repositories
     public class EscolaRepository : IDisposable, IEscolaRepository
     {
         protected DiretoriaModelContainer Db = new DiretoriaModelContainer();
-        public void Add(Domain.Entities.Escola obj)
+        public void Add(Escola obj)
         {
-            Db.Set<Domain.Entities.Escola>().Add(obj);
+            Db.Set<Escola>().Add(obj);
             Db.SaveChanges();
         }
 
@@ -20,23 +21,23 @@ namespace DiretoriaEscolar.Infra.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Domain.Entities.Escola> GetAll()
+        public IEnumerable<Escola> GetAll()
         {
-            return Db.Set<Domain.Entities.Escola>().ToList();
+            return Db.Set<Escola>().ToList();
         }
 
-        public Domain.Entities.Escola GetById(int id)
+        public Escola GetById(int id)
         {
-            return Db.Set<Domain.Entities.Escola>().Find(id);
+            return Db.Set<Escola>().Find(id);
         }
 
-        public void Remove(Domain.Entities.Escola obj)
+        public void Remove(Escola obj)
         {
             Db.Entry(obj).State = EntityState.Deleted;
             Db.SaveChanges();
         }
 
-        public void Update(Domain.Entities.Escola obj)
+        public void Update(Escola obj)
         {
             Db.Entry(obj).State = EntityState.Modified;
             Db.SaveChanges();

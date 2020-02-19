@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.Infra.Data\DiretoriaModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\DiretoriaModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

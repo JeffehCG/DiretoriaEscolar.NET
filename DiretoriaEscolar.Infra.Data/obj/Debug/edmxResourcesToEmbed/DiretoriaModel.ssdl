@@ -4,7 +4,7 @@
     <EntitySet Name="Escola" EntityType="DiretoriaModel.Store.Escola" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Aluno" EntityType="DiretoriaModel.Store.Aluno" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Turma" EntityType="DiretoriaModel.Store.Turma" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="EnderecoSet" EntityType="DiretoriaModel.Store.EnderecoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EnderecosSet" EntityType="DiretoriaModel.Store.EnderecosSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="EscolaTurma" Association="DiretoriaModel.Store.EscolaTurma">
       <End Role="Escola" EntitySet="Escola" />
       <End Role="Turma" EntitySet="Turma" />
@@ -15,11 +15,11 @@
     </AssociationSet>
     <AssociationSet Name="AlunoEnderecoAluno" Association="DiretoriaModel.Store.AlunoEnderecoAluno">
       <End Role="Aluno" EntitySet="Aluno" />
-      <End Role="EnderecoAluno" EntitySet="EnderecoSet" />
+      <End Role="EnderecoAluno" EntitySet="EnderecosSet" />
     </AssociationSet>
     <AssociationSet Name="EscolaEndereco" Association="DiretoriaModel.Store.EscolaEndereco">
       <End Role="Escola" EntitySet="Escola" />
-      <End Role="Endereco" EntitySet="EnderecoSet" />
+      <End Role="Endereco" EntitySet="EnderecosSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Escola">
@@ -51,7 +51,7 @@
     <Property Name="Classe" Type="nvarchar(max)" Nullable="false" />
     <Property Name="EscolaId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="EnderecoSet">
+  <EntityType Name="EnderecosSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -90,7 +90,7 @@
   </Association>
   <Association Name="AlunoEnderecoAluno">
     <End Role="Aluno" Type="DiretoriaModel.Store.Aluno" Multiplicity="0..1" />
-    <End Role="EnderecoAluno" Type="DiretoriaModel.Store.EnderecoSet" Multiplicity="*" />
+    <End Role="EnderecoAluno" Type="DiretoriaModel.Store.EnderecosSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Aluno">
         <PropertyRef Name="Id" />
@@ -102,7 +102,7 @@
   </Association>
   <Association Name="EscolaEndereco">
     <End Role="Escola" Type="DiretoriaModel.Store.Escola" Multiplicity="0..1" />
-    <End Role="Endereco" Type="DiretoriaModel.Store.EnderecoSet" Multiplicity="*" />
+    <End Role="Endereco" Type="DiretoriaModel.Store.EnderecosSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Escola">
         <PropertyRef Name="Id" />

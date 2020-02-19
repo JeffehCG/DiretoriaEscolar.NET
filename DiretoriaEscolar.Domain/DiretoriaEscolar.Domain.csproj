@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Aluno.cs" />
-    <Compile Include="Entities\Endereco.cs" />
-    <Compile Include="Entities\Escola.cs" />
-    <Compile Include="Entities\Turma.cs" />
+    <Compile Include="Models\Aluno.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Escola.cs" />
+    <Compile Include="Models\Turma.cs" />
     <Compile Include="Interfaces\Repositories\IAlunoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IEnderecoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IEscolaRepository.cs" />

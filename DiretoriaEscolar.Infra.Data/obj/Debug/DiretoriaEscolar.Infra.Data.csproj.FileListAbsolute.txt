@@ -11,3 +11,19 @@ C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscol
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.csproj.CopyComplete
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.dll
 C:\Users\Bruno Kenji Tomine\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.pdb
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\DiretoriaEscolar.Infra.Data.dll.config
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\DiretoriaEscolar.Infra.Data.dll
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\DiretoriaEscolar.Infra.Data.pdb
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\DiretoriaEscolar.Domain.dll
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\DiretoriaEscolar.Domain.pdb
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.csprojAssemblyReference.cache
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.csproj.CopyComplete
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.dll
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\obj\Debug\DiretoriaEscolar.Infra.Data.pdb
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\AutoMapper.dll
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\AutoMapper.pdb
+C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\bin\Debug\AutoMapper.xml

@@ -1,4 +1,6 @@
-﻿using DiretoriaEscolar.Domain.Interfaces.Repositories;
+﻿using DiretoriaEscolar.Domain.Entities;
+using DiretoriaEscolar.Domain.Interfaces.Repositories;
+using DiretoriaEscolar.Infra.Data.AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,9 +11,10 @@ namespace DiretoriaEscolar.Infra.Data.Repositories
     public class AlunoRepository : IDisposable, IAlunoRepository
     {
         protected DiretoriaModelContainer Db = new DiretoriaModelContainer();
-        public void Add(Domain.Entities.Aluno obj)
+        private AutoMapperConfig<Aluno, Alunos> _mapper = new AutoMapperConfig<Aluno, Alunos>();
+        public void Add(Aluno obj)
         {
-            Db.Set<Domain.Entities.Aluno>().Add(obj);
+            Db.Set<Alunos>().Add(_mapper.MapClass(obj));
             Db.SaveChanges();
         }
 
@@ -20,25 +23,31 @@ namespace DiretoriaEscolar.Infra.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Domain.Entities.Aluno> GetAll()
+        public IEnumerable<Aluno> GetAll()
         {
-            return Db.Set<Domain.Entities.Aluno>().ToList();
+            var alunosData = Db.Set<Alunos>().ToList();
+            List<Aluno> alunosDomain = new List<Aluno>();
+            foreach (var item in alunosData)
+            {
+                alunosDomain.Add(_mapper.MapClass(item));
+            }
+            return alunosDomain;
         }
 
-        public Domain.Entities.Aluno GetById(int id)
+        public Aluno GetById(int id)
         {
-            return Db.Set<Domain.Entities.Aluno>().Find(id);
+            return _mapper.MapClass(Db.Set<Alunos>().Find(id));
         }
 
-        public void Remove(Domain.Entities.Aluno obj)
+        public void Remove(Aluno obj)
         {
-            Db.Entry(obj).State = EntityState.Deleted;
+            Db.Entry(_mapper.MapClass(obj)).State = EntityState.Deleted;
             Db.SaveChanges();
         }
 
-        public void Update(Domain.Entities.Aluno obj)
+        public void Update(Aluno obj)
         {
-            Db.Entry(obj).State = EntityState.Modified;
+            Db.Entry(_mapper.MapClass(obj)).State = EntityState.Modified;
             Db.SaveChanges();
         }
     }

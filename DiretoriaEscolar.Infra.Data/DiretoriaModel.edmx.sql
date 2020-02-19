@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/16/2020 16:59:01
--- Generated from EDMX file: C:\Users\dezje\Documents\DiretoriaEscolar\DiretoriaEscolar.Infra.Data\DiretoriaModel.edmx
+-- Date Created: 02/18/2020 23:52:17
+-- Generated from EDMX file: C:\Users\dezje\Documents\GitHub\DiretoriaEscolar.NET\DiretoriaEscolar.Infra.Data\DiretoriaModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -24,7 +24,10 @@ IF OBJECT_ID(N'[dbo].[FK_TurmaAluno]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Aluno] DROP CONSTRAINT [FK_TurmaAluno];
 GO
 IF OBJECT_ID(N'[dbo].[FK_AlunoEnderecoAluno]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EnderecoAlunoSet] DROP CONSTRAINT [FK_AlunoEnderecoAluno];
+    ALTER TABLE [dbo].[EnderecoSet] DROP CONSTRAINT [FK_AlunoEnderecoAluno];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EscolaEndereco]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EnderecoSet] DROP CONSTRAINT [FK_EscolaEndereco];
 GO
 
 -- --------------------------------------------------
@@ -40,8 +43,8 @@ GO
 IF OBJECT_ID(N'[dbo].[Turma]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Turma];
 GO
-IF OBJECT_ID(N'[dbo].[EnderecoAlunoSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[EnderecoAlunoSet];
+IF OBJECT_ID(N'[dbo].[EnderecoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EnderecoSet];
 GO
 
 -- --------------------------------------------------
@@ -77,8 +80,8 @@ CREATE TABLE [dbo].[Turma] (
 );
 GO
 
--- Creating table 'EnderecoSet'
-CREATE TABLE [dbo].[EnderecoSet] (
+-- Creating table 'EnderecosSet'
+CREATE TABLE [dbo].[EnderecosSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
     [Cidade] nvarchar(max)  NOT NULL,
@@ -112,9 +115,9 @@ ADD CONSTRAINT [PK_Turma]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'EnderecoSet'
-ALTER TABLE [dbo].[EnderecoSet]
-ADD CONSTRAINT [PK_EnderecoSet]
+-- Creating primary key on [Id] in table 'EnderecosSet'
+ALTER TABLE [dbo].[EnderecosSet]
+ADD CONSTRAINT [PK_EnderecosSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -152,8 +155,8 @@ ON [dbo].[Aluno]
     ([TurmaId]);
 GO
 
--- Creating foreign key on [Aluno_Id] in table 'EnderecoSet'
-ALTER TABLE [dbo].[EnderecoSet]
+-- Creating foreign key on [Aluno_Id] in table 'EnderecosSet'
+ALTER TABLE [dbo].[EnderecosSet]
 ADD CONSTRAINT [FK_AlunoEnderecoAluno]
     FOREIGN KEY ([Aluno_Id])
     REFERENCES [dbo].[Aluno]
@@ -163,12 +166,12 @@ GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_AlunoEnderecoAluno'
 CREATE INDEX [IX_FK_AlunoEnderecoAluno]
-ON [dbo].[EnderecoSet]
+ON [dbo].[EnderecosSet]
     ([Aluno_Id]);
 GO
 
--- Creating foreign key on [Escola_Id] in table 'EnderecoSet'
-ALTER TABLE [dbo].[EnderecoSet]
+-- Creating foreign key on [Escola_Id] in table 'EnderecosSet'
+ALTER TABLE [dbo].[EnderecosSet]
 ADD CONSTRAINT [FK_EscolaEndereco]
     FOREIGN KEY ([Escola_Id])
     REFERENCES [dbo].[Escola]
@@ -178,7 +181,7 @@ GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_EscolaEndereco'
 CREATE INDEX [IX_FK_EscolaEndereco]
-ON [dbo].[EnderecoSet]
+ON [dbo].[EnderecosSet]
     ([Escola_Id]);
 GO
 

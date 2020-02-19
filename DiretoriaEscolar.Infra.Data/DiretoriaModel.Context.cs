@@ -12,7 +12,6 @@ namespace DiretoriaEscolar.Infra.Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using DiretoriaEscolar.Domain.Entities;
     
     public partial class DiretoriaModelContainer : DbContext
     {
@@ -26,9 +25,9 @@ namespace DiretoriaEscolar.Infra.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Escola> Escola { get; set; }
-        public virtual DbSet<Aluno> Aluno { get; set; }
-        public virtual DbSet<Turma> Turma { get; set; }
-        public virtual DbSet<Endereco> Endereco { get; set; }
+        public virtual DbSet<Escolas> Escola { get; set; }
+        public virtual DbSet<Alunos> Aluno { get; set; }
+        public virtual DbSet<Turmas> Turma { get; set; }
+        public virtual DbSet<Enderecos> EnderecosSet { get; set; }
     }
 }

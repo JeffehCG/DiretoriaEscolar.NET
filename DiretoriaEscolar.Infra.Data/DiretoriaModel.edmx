@@ -9,7 +9,7 @@
     <EntitySet Name="Escola" EntityType="DiretoriaModel.Store.Escola" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Aluno" EntityType="DiretoriaModel.Store.Aluno" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Turma" EntityType="DiretoriaModel.Store.Turma" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="EnderecoSet" EntityType="DiretoriaModel.Store.EnderecoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EnderecosSet" EntityType="DiretoriaModel.Store.EnderecosSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="EscolaTurma" Association="DiretoriaModel.Store.EscolaTurma">
       <End Role="Escola" EntitySet="Escola" />
       <End Role="Turma" EntitySet="Turma" />
@@ -20,11 +20,11 @@
     </AssociationSet>
     <AssociationSet Name="AlunoEnderecoAluno" Association="DiretoriaModel.Store.AlunoEnderecoAluno">
       <End Role="Aluno" EntitySet="Aluno" />
-      <End Role="EnderecoAluno" EntitySet="EnderecoSet" />
+      <End Role="EnderecoAluno" EntitySet="EnderecosSet" />
     </AssociationSet>
     <AssociationSet Name="EscolaEndereco" Association="DiretoriaModel.Store.EscolaEndereco">
       <End Role="Escola" EntitySet="Escola" />
-      <End Role="Endereco" EntitySet="EnderecoSet" />
+      <End Role="Endereco" EntitySet="EnderecosSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Escola">
@@ -56,7 +56,7 @@
     <Property Name="Classe" Type="nvarchar(max)" Nullable="false" />
     <Property Name="EscolaId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="EnderecoSet">
+  <EntityType Name="EnderecosSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -95,7 +95,7 @@
   </Association>
   <Association Name="AlunoEnderecoAluno">
     <End Role="Aluno" Type="DiretoriaModel.Store.Aluno" Multiplicity="0..1" />
-    <End Role="EnderecoAluno" Type="DiretoriaModel.Store.EnderecoSet" Multiplicity="*" />
+    <End Role="EnderecoAluno" Type="DiretoriaModel.Store.EnderecosSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Aluno">
         <PropertyRef Name="Id" />
@@ -107,7 +107,7 @@
   </Association>
   <Association Name="EscolaEndereco">
     <End Role="Escola" Type="DiretoriaModel.Store.Escola" Multiplicity="0..1" />
-    <End Role="Endereco" Type="DiretoriaModel.Store.EnderecoSet" Multiplicity="*" />
+    <End Role="Endereco" Type="DiretoriaModel.Store.EnderecosSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Escola">
         <PropertyRef Name="Id" />
@@ -122,10 +122,10 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DiretoriaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="DiretoriaModelContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Escola" EntityType="DiretoriaModel.Escola" />
-          <EntitySet Name="Aluno" EntityType="DiretoriaModel.Aluno" />
-          <EntitySet Name="Turma" EntityType="DiretoriaModel.Turma" />
-          <EntitySet Name="EnderecoSet" EntityType="DiretoriaModel.Endereco" />
+          <EntitySet Name="Escola" EntityType="DiretoriaModel.Escolas" />
+          <EntitySet Name="Aluno" EntityType="DiretoriaModel.Alunos" />
+          <EntitySet Name="Turma" EntityType="DiretoriaModel.Turmas" />
+          <EntitySet Name="EnderecosSet" EntityType="DiretoriaModel.Enderecos" />
           <AssociationSet Name="EscolaTurma" Association="DiretoriaModel.EscolaTurma">
             <End Role="Escola" EntitySet="Escola" />
             <End Role="Turma" EntitySet="Turma" />
@@ -136,14 +136,14 @@
           </AssociationSet>
           <AssociationSet Name="AlunoEnderecoAluno" Association="DiretoriaModel.AlunoEnderecoAluno">
             <End Role="Aluno" EntitySet="Aluno" />
-            <End Role="EnderecoAluno" EntitySet="EnderecoSet" />
+            <End Role="EnderecoAluno" EntitySet="EnderecosSet" />
           </AssociationSet>
           <AssociationSet Name="EscolaEndereco" Association="DiretoriaModel.EscolaEndereco">
             <End Role="Escola" EntitySet="Escola" />
-            <End Role="Endereco" EntitySet="EnderecoSet" />
+            <End Role="Endereco" EntitySet="EnderecosSet" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Escola">
+        <EntityType Name="Escolas">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -153,7 +153,7 @@
           <NavigationProperty Name="Turma" Relationship="DiretoriaModel.EscolaTurma" FromRole="Escola" ToRole="Turma" />
           <NavigationProperty Name="Endereco" Relationship="DiretoriaModel.EscolaEndereco" FromRole="Escola" ToRole="Endereco" />
         </EntityType>
-        <EntityType Name="Aluno">
+        <EntityType Name="Alunos">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -166,7 +166,7 @@
           <NavigationProperty Name="EnderecoAluno" Relationship="DiretoriaModel.AlunoEnderecoAluno" FromRole="Aluno" ToRole="EnderecoAluno" />
           <Property Name="DataNascimento" Type="DateTime" Nullable="false" />
         </EntityType>
-        <EntityType Name="Turma">
+        <EntityType Name="Turmas">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -178,7 +178,7 @@
           <Property Name="EscolaId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Aluno" Relationship="DiretoriaModel.TurmaAluno" FromRole="Turma" ToRole="Aluno" />
         </EntityType>
-        <EntityType Name="Endereco">
+        <EntityType Name="Enderecos">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -192,8 +192,8 @@
           <NavigationProperty Name="Escola" Relationship="DiretoriaModel.EscolaEndereco" FromRole="Endereco" ToRole="Escola" />
         </EntityType>
         <Association Name="EscolaTurma">
-          <End Type="DiretoriaModel.Escola" Role="Escola" Multiplicity="1" />
-          <End Type="DiretoriaModel.Turma" Role="Turma" Multiplicity="*" />
+          <End Type="DiretoriaModel.Escolas" Role="Escola" Multiplicity="1" />
+          <End Type="DiretoriaModel.Turmas" Role="Turma" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Escola">
               <PropertyRef Name="Id" />
@@ -204,8 +204,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="TurmaAluno">
-          <End Type="DiretoriaModel.Turma" Role="Turma" Multiplicity="1" />
-          <End Type="DiretoriaModel.Aluno" Role="Aluno" Multiplicity="*" />
+          <End Type="DiretoriaModel.Turmas" Role="Turma" Multiplicity="1" />
+          <End Type="DiretoriaModel.Alunos" Role="Aluno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Turma">
               <PropertyRef Name="Id" />
@@ -216,12 +216,12 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="AlunoEnderecoAluno">
-          <End Type="DiretoriaModel.Aluno" Role="Aluno" Multiplicity="0..1" />
-          <End Type="DiretoriaModel.Endereco" Role="EnderecoAluno" Multiplicity="0..1" />
+          <End Type="DiretoriaModel.Alunos" Role="Aluno" Multiplicity="0..1" />
+          <End Type="DiretoriaModel.Enderecos" Role="EnderecoAluno" Multiplicity="0..1" />
         </Association>
         <Association Name="EscolaEndereco">
-          <End Type="DiretoriaModel.Escola" Role="Escola" Multiplicity="0..1" />
-          <End Type="DiretoriaModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+          <End Type="DiretoriaModel.Escolas" Role="Escola" Multiplicity="0..1" />
+          <End Type="DiretoriaModel.Enderecos" Role="Endereco" Multiplicity="0..1" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -230,7 +230,7 @@
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DiretoriaModelStoreContainer" CdmEntityContainer="DiretoriaModelContainer">
     <EntitySetMapping Name="Escola">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Escola)">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Escolas)">
         <MappingFragment StoreEntitySet="Escola">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
@@ -239,7 +239,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Aluno">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Aluno)">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Alunos)">
         <MappingFragment StoreEntitySet="Aluno">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
@@ -251,7 +251,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Turma">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Turma)">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Turmas)">
         <MappingFragment StoreEntitySet="Turma">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Ano" ColumnName="Ano" />
@@ -261,9 +261,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EnderecoSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Endereco)">
-        <MappingFragment StoreEntitySet="EnderecoSet">
+    <EntitySetMapping Name="EnderecosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Enderecos)">
+        <MappingFragment StoreEntitySet="EnderecosSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Cidade" ColumnName="Cidade" />
@@ -273,7 +273,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="AlunoEnderecoAluno" TypeName="DiretoriaModel.AlunoEnderecoAluno" StoreEntitySet="EnderecoSet">
+    <AssociationSetMapping Name="AlunoEnderecoAluno" TypeName="DiretoriaModel.AlunoEnderecoAluno" StoreEntitySet="EnderecosSet">
       <EndProperty Name="Aluno">
         <ScalarProperty Name="Id" ColumnName="Aluno_Id" />
       </EndProperty>
@@ -282,7 +282,7 @@
       </EndProperty>
       <Condition ColumnName="Aluno_Id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="EscolaEndereco" TypeName="DiretoriaModel.EscolaEndereco" StoreEntitySet="EnderecoSet">
+    <AssociationSetMapping Name="EscolaEndereco" TypeName="DiretoriaModel.EscolaEndereco" StoreEntitySet="EnderecosSet">
       <EndProperty Name="Escola">
         <ScalarProperty Name="Id" ColumnName="Escola_Id" />
       </EndProperty>

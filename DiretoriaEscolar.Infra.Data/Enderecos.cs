@@ -12,7 +12,7 @@ namespace DiretoriaEscolar.Infra.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Endereco
+    public partial class Enderecos
     {
         public int Id { get; set; }
         public string Estado { get; set; }
@@ -21,7 +21,7 @@ namespace DiretoriaEscolar.Infra.Data
         public string Rua { get; set; }
         public string Numero { get; set; }
     
-        public virtual Aluno Aluno { get; set; }
-        public virtual Escola Escola { get; set; }
+        public virtual Alunos Aluno { get; set; }
+        public virtual Escolas Escola { get; set; }
     }
 }

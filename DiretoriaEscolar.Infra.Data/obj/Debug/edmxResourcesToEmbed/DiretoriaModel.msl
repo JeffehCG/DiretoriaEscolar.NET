@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DiretoriaModelStoreContainer" CdmEntityContainer="DiretoriaModelContainer">
     <EntitySetMapping Name="Escola">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Escola)">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Escolas)">
         <MappingFragment StoreEntitySet="Escola">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Aluno">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Aluno)">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Alunos)">
         <MappingFragment StoreEntitySet="Aluno">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
@@ -23,7 +23,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Turma">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Turma)">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Turmas)">
         <MappingFragment StoreEntitySet="Turma">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Ano" ColumnName="Ano" />
@@ -33,9 +33,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EnderecoSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Endereco)">
-        <MappingFragment StoreEntitySet="EnderecoSet">
+    <EntitySetMapping Name="EnderecosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DiretoriaModel.Enderecos)">
+        <MappingFragment StoreEntitySet="EnderecosSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Cidade" ColumnName="Cidade" />
@@ -45,7 +45,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="AlunoEnderecoAluno" TypeName="DiretoriaModel.AlunoEnderecoAluno" StoreEntitySet="EnderecoSet">
+    <AssociationSetMapping Name="AlunoEnderecoAluno" TypeName="DiretoriaModel.AlunoEnderecoAluno" StoreEntitySet="EnderecosSet">
       <EndProperty Name="Aluno">
         <ScalarProperty Name="Id" ColumnName="Aluno_Id" />
       </EndProperty>
@@ -54,7 +54,7 @@
       </EndProperty>
       <Condition ColumnName="Aluno_Id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="EscolaEndereco" TypeName="DiretoriaModel.EscolaEndereco" StoreEntitySet="EnderecoSet">
+    <AssociationSetMapping Name="EscolaEndereco" TypeName="DiretoriaModel.EscolaEndereco" StoreEntitySet="EnderecosSet">
       <EndProperty Name="Escola">
         <ScalarProperty Name="Id" ColumnName="Escola_Id" />
       </EndProperty>

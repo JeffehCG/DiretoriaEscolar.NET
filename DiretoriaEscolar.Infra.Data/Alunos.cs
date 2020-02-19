@@ -12,7 +12,7 @@ namespace DiretoriaEscolar.Infra.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Aluno
+    public partial class Alunos
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -21,7 +21,7 @@ namespace DiretoriaEscolar.Infra.Data
         public int TurmaId { get; set; }
         public System.DateTime DataNascimento { get; set; }
     
-        public virtual Turma Turma { get; set; }
-        public virtual Endereco EnderecoAluno { get; set; }
+        public virtual Turmas Turma { get; set; }
+        public virtual Enderecos EnderecoAluno { get; set; }
     }
 }

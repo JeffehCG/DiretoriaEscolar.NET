@@ -12,22 +12,20 @@ namespace DiretoriaEscolar.Infra.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Turma
+    public partial class Escolas
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Turma()
+        public Escolas()
         {
-            this.Aluno = new HashSet<Aluno>();
+            this.Turma = new HashSet<Turmas>();
         }
     
         public int Id { get; set; }
-        public string Ano { get; set; }
-        public string Serie { get; set; }
-        public string Classe { get; set; }
-        public int EscolaId { get; set; }
+        public string Nome { get; set; }
+        public string CNPJ { get; set; }
     
-        public virtual Escola Escola { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Aluno> Aluno { get; set; }
+        public virtual ICollection<Turmas> Turma { get; set; }
+        public virtual Enderecos Endereco { get; set; }
     }
 }
