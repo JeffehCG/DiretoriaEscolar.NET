@@ -6,12 +6,6 @@ namespace DiretoriaEscolar.Domain.Entities
     [DataContract]
     public class Turma
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Turma()
-        {
-            this.Aluno = new HashSet<Aluno>();
-        }
-
         [DataMember]
         public int Id { get; set; }
         [DataMember]
@@ -22,10 +16,8 @@ namespace DiretoriaEscolar.Domain.Entities
         public string Classe { get; set; }
         [DataMember]
         public int EscolaId { get; set; }
-
         [DataMember]
         public virtual Escola Escola { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [DataMember]
         public virtual ICollection<Aluno> Aluno { get; set; }
     }

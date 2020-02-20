@@ -27,9 +27,9 @@ namespace DiretoriaEscolar.Infra.Data.AutoMapper
                 cfg.CreateMap<Enderecos, Endereco>();
 
                 cfg.CreateMap<Escola, Escolas>();
-                cfg.CreateMap<Turma, Escolas>();
-                cfg.CreateMap<Aluno, Escolas>();
-                cfg.CreateMap<Endereco, Escolas>();
+                cfg.CreateMap<Turma, Turmas>();
+                cfg.CreateMap<Aluno, Alunos>();
+                cfg.CreateMap<Endereco, Enderecos>();
 
             });
         }
