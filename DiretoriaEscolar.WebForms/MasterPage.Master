@@ -12,12 +12,9 @@
 <body>
     <form id="form1" runat="server">
         <header><h1>Title</h1></header>
-        <asp:Menu ID="Menu1" CssClass="menu-page" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2" StaticSubMenuIndent="16px">
-                <DynamicItemTemplate>
-                    <%# Eval("Text") %>
-                </DynamicItemTemplate>
-            </asp:Menu>
-        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <asp:Menu ID="Menu1" CssClass="menu-page" runat="server" DataSourceID="SiteMapDiretoria" Orientation="Horizontal" StaticDisplayLevels="2">
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDiretoria" runat="server" />
         <div class="content-page">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
