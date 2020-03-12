@@ -17,8 +17,6 @@ namespace DiretoriaEscolar.Domain.Entities
         [DataMember]
         public int EscolaId { get; set; }
         [DataMember]
-        public virtual Escola Escola { get; set; }
-        [DataMember]
         public virtual ICollection<Aluno> Aluno { get; set; }
     }
 }

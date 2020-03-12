@@ -32,9 +32,6 @@ namespace DiretoriaEscolar.WebForms.TurmaService {
         private string ClasseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.TurmaService.Escola EscolaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EscolaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -93,19 +90,6 @@ namespace DiretoriaEscolar.WebForms.TurmaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.TurmaService.Escola Escola {
-            get {
-                return this.EscolaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EscolaField, value) != true)) {
-                    this.EscolaField = value;
-                    this.RaisePropertyChanged("Escola");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int EscolaId {
             get {
                 return this.EscolaIdField;
@@ -156,115 +140,6 @@ namespace DiretoriaEscolar.WebForms.TurmaService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Escola", Namespace="http://schemas.datacontract.org/2004/07/DiretoriaEscolar.Domain.Entities")]
-    [System.SerializableAttribute()]
-    public partial class Escola : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CNPJField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.TurmaService.Endereco EnderecoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NomeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.TurmaService.Turma[] TurmaField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CNPJ {
-            get {
-                return this.CNPJField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CNPJField, value) != true)) {
-                    this.CNPJField = value;
-                    this.RaisePropertyChanged("CNPJ");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.TurmaService.Endereco Endereco {
-            get {
-                return this.EnderecoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EnderecoField, value) != true)) {
-                    this.EnderecoField = value;
-                    this.RaisePropertyChanged("Endereco");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nome {
-            get {
-                return this.NomeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NomeField, value) != true)) {
-                    this.NomeField = value;
-                    this.RaisePropertyChanged("Nome");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.TurmaService.Turma[] Turma {
-            get {
-                return this.TurmaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TurmaField, value) != true)) {
-                    this.TurmaField = value;
-                    this.RaisePropertyChanged("Turma");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Aluno", Namespace="http://schemas.datacontract.org/2004/07/DiretoriaEscolar.Domain.Entities")]
     [System.SerializableAttribute()]
     public partial class Aluno : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -289,9 +164,6 @@ namespace DiretoriaEscolar.WebForms.TurmaService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TelefoneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.TurmaService.Turma TurmaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TurmaIdField;
@@ -380,19 +252,6 @@ namespace DiretoriaEscolar.WebForms.TurmaService {
                 if ((object.ReferenceEquals(this.TelefoneField, value) != true)) {
                     this.TelefoneField = value;
                     this.RaisePropertyChanged("Telefone");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.TurmaService.Turma Turma {
-            get {
-                return this.TurmaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TurmaField, value) != true)) {
-                    this.TurmaField = value;
-                    this.RaisePropertyChanged("Turma");
                 }
             }
         }
@@ -563,6 +422,115 @@ namespace DiretoriaEscolar.WebForms.TurmaService {
                 if ((object.ReferenceEquals(this.RuaField, value) != true)) {
                     this.RuaField = value;
                     this.RaisePropertyChanged("Rua");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Escola", Namespace="http://schemas.datacontract.org/2004/07/DiretoriaEscolar.Domain.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Escola : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CNPJField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DiretoriaEscolar.WebForms.TurmaService.Endereco EnderecoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NomeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DiretoriaEscolar.WebForms.TurmaService.Turma[] TurmaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CNPJ {
+            get {
+                return this.CNPJField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CNPJField, value) != true)) {
+                    this.CNPJField = value;
+                    this.RaisePropertyChanged("CNPJ");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DiretoriaEscolar.WebForms.TurmaService.Endereco Endereco {
+            get {
+                return this.EnderecoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EnderecoField, value) != true)) {
+                    this.EnderecoField = value;
+                    this.RaisePropertyChanged("Endereco");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nome {
+            get {
+                return this.NomeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NomeField, value) != true)) {
+                    this.NomeField = value;
+                    this.RaisePropertyChanged("Nome");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DiretoriaEscolar.WebForms.TurmaService.Turma[] Turma {
+            get {
+                return this.TurmaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TurmaField, value) != true)) {
+                    this.TurmaField = value;
+                    this.RaisePropertyChanged("Turma");
                 }
             }
         }

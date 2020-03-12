@@ -17,9 +17,6 @@ namespace DiretoriaEscolar.Domain.Entities
         public int TurmaId { get; set; }
         [DataMember]
         public System.DateTime DataNascimento { get; set; }
-
-        [DataMember]
-        public virtual Turma Turma { get; set; }
         [DataMember]
         public virtual Endereco EnderecoAluno { get; set; }
     }

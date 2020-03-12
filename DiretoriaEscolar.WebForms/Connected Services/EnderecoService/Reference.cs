@@ -198,9 +198,6 @@ namespace DiretoriaEscolar.WebForms.EnderecoService {
         private string TelefoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.EnderecoService.Turma TurmaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TurmaIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -287,19 +284,6 @@ namespace DiretoriaEscolar.WebForms.EnderecoService {
                 if ((object.ReferenceEquals(this.TelefoneField, value) != true)) {
                     this.TelefoneField = value;
                     this.RaisePropertyChanged("Telefone");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.EnderecoService.Turma Turma {
-            get {
-                return this.TurmaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TurmaField, value) != true)) {
-                    this.TurmaField = value;
-                    this.RaisePropertyChanged("Turma");
                 }
             }
         }
@@ -455,9 +439,6 @@ namespace DiretoriaEscolar.WebForms.EnderecoService {
         private string ClasseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.EnderecoService.Escola EscolaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EscolaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -511,19 +492,6 @@ namespace DiretoriaEscolar.WebForms.EnderecoService {
                 if ((object.ReferenceEquals(this.ClasseField, value) != true)) {
                     this.ClasseField = value;
                     this.RaisePropertyChanged("Classe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.EnderecoService.Escola Escola {
-            get {
-                return this.EscolaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EscolaField, value) != true)) {
-                    this.EscolaField = value;
-                    this.RaisePropertyChanged("Escola");
                 }
             }
         }

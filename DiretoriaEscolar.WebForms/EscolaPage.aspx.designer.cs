@@ -7,9 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DiretoriaEscolar.WebForms {
-    
-    
-    public partial class EscolaPage {
+namespace DiretoriaEscolar.WebForms
+{
+
+
+    public partial class EscolaPage
+    {
+
+        /// <summary>
+        /// tbEscolas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tbEscolas;
     }
 }

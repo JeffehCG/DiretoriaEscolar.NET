@@ -16,23 +16,57 @@ html {
             width: 100%;
 
             header {
-                height: 10%;
+                height: 8%;
                 width: 100%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                background-color: #DCC7AA;
+
+                h1 {
+                    color: #FFFFFF;
+                }
             }
 
             .menu-page {
-                height: 10%;
+                height: 8%;
                 width: 100%;
+                background-color: #DCC7AA;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+                ul {
+                    width: 100% !important;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+
+                    a.level2 {
+                        width: 100px;
+                        background-color: #F7882F;
+                        padding: 0.7rem;
+                        border-radius: 5px;
+                        margin: 0px 0.7rem 0px 0.7rem;
+                        text-align: center;
+                        color: #6B7A8F;
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
             }
 
             .content-page {
-                height: 70%;
+                height: 79%;
                 width: 100%;
             }
 
             footer {
-                height: 10%;
+                height: 5%;
                 width: 100%;
+                background-color: #6B7A8F;
+                color: #FFFFFF;
+                text-align: center;
             }
         }
     }

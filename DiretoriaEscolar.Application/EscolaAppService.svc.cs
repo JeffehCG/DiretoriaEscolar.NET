@@ -30,6 +30,13 @@ namespace DiretoriaEscolar.Application
 
         public Escola GetById(int id)
         {
+            //Escola escola = new Escola();
+            //escola.Nome = "Teste";
+            //escola.CNPJ = "5454646446";
+            //escola.Id = 10;
+            //escola.Nome = "Teste";
+            //return escola;
+
             return _escolaService.GetById(id);
         }
 

@@ -298,9 +298,6 @@ namespace DiretoriaEscolar.WebForms.EscolaService {
         private string ClasseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.EscolaService.Escola EscolaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EscolaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -354,19 +351,6 @@ namespace DiretoriaEscolar.WebForms.EscolaService {
                 if ((object.ReferenceEquals(this.ClasseField, value) != true)) {
                     this.ClasseField = value;
                     this.RaisePropertyChanged("Classe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.EscolaService.Escola Escola {
-            get {
-                return this.EscolaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EscolaField, value) != true)) {
-                    this.EscolaField = value;
-                    this.RaisePropertyChanged("Escola");
                 }
             }
         }
@@ -446,9 +430,6 @@ namespace DiretoriaEscolar.WebForms.EscolaService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TelefoneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private DiretoriaEscolar.WebForms.EscolaService.Turma TurmaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TurmaIdField;
@@ -537,19 +518,6 @@ namespace DiretoriaEscolar.WebForms.EscolaService {
                 if ((object.ReferenceEquals(this.TelefoneField, value) != true)) {
                     this.TelefoneField = value;
                     this.RaisePropertyChanged("Telefone");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public DiretoriaEscolar.WebForms.EscolaService.Turma Turma {
-            get {
-                return this.TurmaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TurmaField, value) != true)) {
-                    this.TurmaField = value;
-                    this.RaisePropertyChanged("Turma");
                 }
             }
         }

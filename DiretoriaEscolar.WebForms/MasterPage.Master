@@ -11,7 +11,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header><h1>Title</h1></header>
+        <header>
+            <asp:Image ID="Image1" runat="server" Height="44px" ImageUrl="~/Images/livros.png" Width="65px" />
+            <h1>Diretoria Escolar</h1>
+        </header>
         <asp:Menu ID="Menu1" CssClass="menu-page" runat="server" DataSourceID="SiteMapDiretoria" Orientation="Horizontal" StaticDisplayLevels="2">
         </asp:Menu>
         <asp:SiteMapDataSource ID="SiteMapDiretoria" runat="server" />
@@ -19,7 +22,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <footer>Footer</footer>
+        <footer>Desenvolvido por Jefferson C. Gomes @2020</footer>
     </form>
 </body>
 </html>

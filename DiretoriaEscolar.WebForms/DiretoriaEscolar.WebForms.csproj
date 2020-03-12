@@ -113,6 +113,7 @@
     <Content Include="CSS\MasterPage.css" />
     <Content Include="EscolaPage.aspx" />
     <Content Include="gulpfile.js" />
+    <Content Include="Images\livros.png" />
     <Content Include="TurmaPage.aspx" />
     <Content Include="Web.config" />
     <None Include="Connected Services\AlunoService\AlunoAppService2.xsd">
